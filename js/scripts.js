@@ -21,15 +21,6 @@ function beepBoop(number, name) {
   }
   return numberArray;
 }
-function reverseResult(array){
-  var reverse = [];
-  for (var i = (array.length-1); i >= 0; i--) {
-    reverse.push(array[i]);
-  }
-  return reverse;
-}
-
-
 $(function(){
   $("#formOne").submit(function(event){
     event.preventDefault();
@@ -40,7 +31,6 @@ $(function(){
     var number = parseInt($("#number").val());
     var name = $("#name").val();
     var result= beepBoop(number, name);
-    var reverse= reverseResult(result);
     for (var i = 0; i < result.length; i++) {
       if (i !== (result.length-1)) {
         $("#result").append(result[i] + ", ");
@@ -48,11 +38,11 @@ $(function(){
         $("#result").append(result[i] + ".");
       }
     }
-    for (var i = 0; i < reverse.length; i++) {
-      if (i !== (reverse.length-1)) {
-        $("#tluser").append(reverse[i] + ", ");
+    for (var i = result.length-1; i >= 0; i--) {
+      if (i !== 0) {
+        $("#tluser").append(result[i] + ", ");
       }else {
-        $("#tluser").append(reverse[i] + ".");
+        $("#tluser").append(result[i] + ".");
       }
     }
   });
