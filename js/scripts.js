@@ -1,8 +1,8 @@
-function beepBoop(number) {
+function beepBoop(number, name) {
   var numberArray = [];
   for (var i = 0; i <= number; i++) {
     if (i%3 === 0 && i!==0) {
-      numberArray.push("I'm sorry, Dave. I'm afraid I can't do that.");
+      numberArray.push("I'm sorry, " + name + ". I'm afraid I can't do that.");
     }else if (/1/.test(i)) {
       numberArray.push("Boop!");
     }else if(/0/.test(i)) {
@@ -11,16 +11,42 @@ function beepBoop(number) {
       numberArray.push(i);
     }
   }
-  return numberArray
+  return numberArray;
 }
-
+function reverseResult(array){
+  var reverse = [];
+  for (var i = (array.length-1); i >= 0; i--) {
+    reverse.push(array[i]);
+  }
+  return reverse;
+}
 
 
 $(function(){
   $("#formOne").submit(function(event){
     event.preventDefault();
-    var number = parseInt($("#input").val());
-    var result= beepBoop(number);
-    $("#result").text(result);
+    $(".results").show();
+    $("#result").text("");
+    var number = parseInt($("#number").val());
+    var name = $("#name").val();
+    var result= beepBoop(number, name);
+    for (var i = 0; i < result.length; i++) {
+      if (i !== (result.length-1)) {
+        $("#result").append(result[i] + ", ");
+      }else {
+        $("#result").append(result[i] + ".");
+      }
+    }
+    $("#reverse").click(function(){
+      var reverse= reverseResult(result);
+      $("#result").text("");
+      for (var i = 0; i < reverse.length; i++) {
+        if (i !== (reverse.length-1)) {
+          $("#result").append(reverse[i] + ", ");
+        }else {
+          $("#result").append(reverse[i] + ".");
+        }
+      }
+    });
   });
 });
