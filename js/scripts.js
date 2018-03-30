@@ -3,7 +3,7 @@ function beepBoop(number) {
     number = "I'm sorry, Dave. I'm afraid I can't do that."
   }else if (number === "1") {
     number = "Boop!"
-  }else if(number === "0") {
+  }else if(/0/.test(number)) {
     number = "Beep!"
   }
   return number
