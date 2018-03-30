@@ -1,6 +1,8 @@
 function beepBoop(number) {
-  if (number === "1") {
-    num = "Boop!"
+  if (number === "3") {
+    number = "I'm sorry, Dave. I'm afraid I can't do that."
+  }else if (number === "1") {
+    number = "Boop!"
   }else if(number === "0") {
     number = "Beep!"
   }
@@ -10,10 +12,10 @@ function beepBoop(number) {
 
 
 $(function(){
-  $(".formOne").submit(function(event){
+  $("#formOne").submit(function(event){
     event.preventDefault();
     var number = $("#input").val();
     var result= beepBoop(number);
-    $("#result").test(result);
+    $("#result").text(result);
   });
 });
