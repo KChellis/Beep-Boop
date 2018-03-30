@@ -6,7 +6,7 @@
 
 ## Description
 
-_This page can takes an input number and returns a range of numbers from 0 to the number with all numbers divisible by 3 changed to "I'm sorry dave I'm afraid i can't do that, numbers with 1 changed to boop and numbers with 0 containing beep_
+_This page can takes an input number and returns a range of numbers from 0 to the number with all numbers divisible by 3 changed to "I'm sorry dave I'm afraid i can't do that, numbers with 1 changed to boop and numbers with 0 containing beep. https://kchellis.github.io/Beep-Boop/_
 
 ### Specs
 | Spec | Input | Output |
