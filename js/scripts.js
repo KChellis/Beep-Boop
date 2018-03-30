@@ -7,6 +7,10 @@ function beepBoop(number, name) {
       numberArray.push("I am the walrus");
     }else if (i%3 === 0 && i!==0) {
       numberArray.push("I'm sorry, " + name + ". I'm afraid I can't do that.");
+    }else if (/5/.test(i)) {
+      numberArray.push('<img src="img/five.png">');
+    }else if (/2/.test(i)) {
+      numberArray.push('<img src="img/two.png">')
     }else if (/1/.test(i)) {
       numberArray.push("Boop!");
     }else if(/0/.test(i)) {
