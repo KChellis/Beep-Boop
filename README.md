@@ -16,7 +16,7 @@ _This page can takes an input number and returns a range of numbers from 0 to th
 | **Program replaces 3 with 'I'm sorry, Dave. I'm afraid I can't do that.'**| User Input: 3 | Output: 'I'm sorry, Dave. I'm afraid I can't do that.' |
 | **Program replaces any number containing 0 with 'Beep!'**| Input: 20 | Output: 'Beep!' |
 | **Program replaces any number containing 1 with 'Boop!'** | Input: 11 | Output: 'Boop!' |
-| **Program replaces any number divisible by 3 with 'I'm sorry, Dave. I'm afraid I can't do that.'**| User Input: 3 | Output: 'I'm sorry, Dave. I'm afraid I can't do that.' |
+| **Program replaces any number divisible by 3 with 'I'm sorry, Dave. I'm afraid I can't do that.'**| User Input: 33 | Output: 'I'm sorry, Dave. I'm afraid I can't do that.' |
 | **Program generates range of numbers 0-input**| Input: 2 | Output: Beep!, Boop!, 2 |
 
 ## Setup/Installation Requirements
