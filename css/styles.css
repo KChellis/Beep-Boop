@@ -1,3 +1,22 @@
 .results {
   display: none;
 }
+body {
+  background-image: url(../img/background.jpg);
+}
+h1 {
+  text-align: center;
+}
+.jumbotron {
+  background-color: rgba(244, 255, 194, 0.50);
+}
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+ p {
+   font-size: 20px;
+ }
+ button {
+   margin: 5px;
+ }

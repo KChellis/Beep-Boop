@@ -10,18 +10,21 @@
   </head>
   <body>
     <div class="container">
-      <div class="forward">
-        <form id="formOne">
-          <label for="number">Enter a number</label>
-          <input id="number" type="number" name="number" class="form-control" required>
-          <label for="name">Enter a name</label>
-          <input id="name" type="text" name="name" class="form-control" required>
-          <button type="submit" name="button">Submit</button>
-        </form>
+      <div class="jumbotron">
+        <h1>Beep! Boop!</h1>
       </div>
+      <form id="formOne">
+        <label for="number">Enter a number</label>
+        <input id="number" type="number" name="number" class="form-control" required>
+        <label for="name">Enter a name</label>
+        <input id="name" type="text" name="name" class="form-control" required>
+        <button type="submit" name="button">Submit</button>
+      </form>
       <div class="results">
-        <p id=result></p>
+        <p id="result"></p>
+        <p id="tluser"></p>
         <button id="reverse" type="button" name="button">Reverse</button>
+        <button id="clear" type="button" name="button">Clear</button>
       </div>
     </div>
   </body>

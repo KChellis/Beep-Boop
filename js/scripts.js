@@ -1,7 +1,11 @@
 function beepBoop(number, name) {
   var numberArray = [];
   for (var i = 0; i <= number; i++) {
-    if (i%3 === 0 && i!==0) {
+    if (i === 42) {
+      numberArray.push("Life the universe and everything");
+    }else if (i%4 === 0 && i !== 0) {
+      numberArray.push("I am the walrus");
+    }else if (i%3 === 0 && i!==0) {
       numberArray.push("I'm sorry, " + name + ". I'm afraid I can't do that.");
     }else if (/1/.test(i)) {
       numberArray.push("Boop!");
@@ -26,10 +30,13 @@ $(function(){
   $("#formOne").submit(function(event){
     event.preventDefault();
     $(".results").show();
+    $("#tluser").hide();
     $("#result").text("");
+    $("#tluser").text("");
     var number = parseInt($("#number").val());
     var name = $("#name").val();
     var result= beepBoop(number, name);
+    var reverse= reverseResult(result);
     for (var i = 0; i < result.length; i++) {
       if (i !== (result.length-1)) {
         $("#result").append(result[i] + ", ");
@@ -37,16 +44,19 @@ $(function(){
         $("#result").append(result[i] + ".");
       }
     }
-    $("#reverse").click(function(){
-      var reverse= reverseResult(result);
-      $("#result").text("");
-      for (var i = 0; i < reverse.length; i++) {
-        if (i !== (reverse.length-1)) {
-          $("#result").append(reverse[i] + ", ");
-        }else {
-          $("#result").append(reverse[i] + ".");
-        }
+    for (var i = 0; i < reverse.length; i++) {
+      if (i !== (reverse.length-1)) {
+        $("#tluser").append(reverse[i] + ", ");
+      }else {
+        $("#tluser").append(reverse[i] + ".");
       }
-    });
+    }
+  });
+  $("#reverse").click(function(){
+    $("#result").toggle();
+    $("#tluser").toggle();
+  });
+  $("#clear").click(function(){
+    location.reload();
   });
 });
