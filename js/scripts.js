@@ -1,5 +1,7 @@
 function beepBoop(number) {
-  if(number === "0") {
+  if (number === "1") {
+    num = "Boop!"
+  }else if(number === "0") {
     number = "Beep!"
   }
   return number
